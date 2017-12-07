@@ -1,0 +1,90 @@
+import java.util.*;
+public class RandomHater {
+	public static void main(String []args)
+	 {
+	  System.out.println(" Введите имя и фамилию :");
+	    Scanner scan = new Scanner(System.in);
+	    Random r = new Random();
+	    String ch = new String();
+	    String ch2 = new String();
+	    String ch3 = new String();
+	    String chrep1 = new String();
+	    String chrep2 = new String();
+	    String chrep3 = new String();
+	    
+	    
+	    char c = (char)(r.nextInt(21) + 'f');
+	    ch=ch.concat(String.valueOf(c));
+	    
+	    char c1 = (char)(r.nextInt(21) + 'f');
+	    if(!ch.equals(String.valueOf(c1))) {
+	     ch2=ch2.concat(String.valueOf(c1));
+	    }else {
+	     ch2=ch2.concat("a");
+	    }
+	    
+	    char c2 = (char)(r.nextInt(21) + 'f');
+	    if(!ch2.equals(String.valueOf(c2))&&!ch.equals(String.valueOf(c2)))
+	    {
+	     ch3=ch3.concat(String.valueOf(c2));
+	    }else {   
+	      ch3=ch3.concat("e");
+	    }
+	    
+	    
+	    char k1 = (char)(r.nextInt(21) + 'f');
+	    if(!ch2.equals(String.valueOf(k1))&&!ch.equals(String.valueOf(k1))) {
+	     chrep1=chrep1.concat(String.valueOf(k1));
+	    }else {
+	      chrep1=chrep1.concat("d");
+	    } 
+	    
+	    char k2 = (char)(r.nextInt(21) + 'f');
+	    if(!ch2.equals(String.valueOf(k2))&&!ch.equals(String.valueOf(k2))&&!chrep1.equals(String.valueOf(k2))&&!ch3.equals(String.valueOf(k2))) {
+	     chrep2=chrep2.concat(String.valueOf(k2));
+	    }else {
+	      chrep2=chrep2.concat("b");
+	    }
+	    
+	    char k3 = (char)(r.nextInt(21) + 'f');
+	    if(!ch2.equals(String.valueOf(k3))&&!ch.equals(String.valueOf(k3))&&!!ch3.equals(String.valueOf(k3))&&!chrep1.equals(String.valueOf(k3))&&!chrep2.equals(String.valueOf(k3))) {
+	     chrep3=chrep3.concat(String.valueOf(k3));
+	    }else {
+	     chrep3=chrep3.concat("c");
+	    }
+	    
+	    String phrase1 = scan.nextLine();
+	    
+	  String phrase2 = phrase1.replace(ch, chrep1);
+	  String phrase3 = phrase2.replace(ch2, chrep2);
+	  String phrase4 = phrase3.replace(ch3, chrep3);
+	  System.out.println("Рандомные символы: "+" "+ ch+ " " + ch2 + " " + ch3);
+	  System.out.println("Рандомные символы на которые заменить: "+" "+ chrep1+ " " + chrep2 + " " + chrep3);
+	    System.out.println("Измененные имя и фамилия :" + phrase4);
+	    
+	 }
+//	public static void main(String[] args) {
+//		System.out.println(" Введите имя и фамилию или фразу :");
+//		Scanner scan = new Scanner(System.in);
+//		Random r = new Random();
+//		char c = (char)(r.nextInt(26) + 'a');
+//		char c2 = (char)(r.nextInt(26) + 'a');
+//		char c3 = (char)(r.nextInt(26)+'a');
+//		char k= (char)(r.nextInt(26)+'a');
+//		char k2 = (char)(r.nextInt(26)+'a');
+//		char k3 = (char)(r.nextInt(26)+'a');
+//		String phrase1 = scan.nextLine();
+//		String phrase11 = phrase1.replace( c, k );
+//		String phrase12 = phrase11.replace(c2, k2);
+//		String phrase13 = phrase12.replace(c3, k3);
+//
+//System.out.println("Измененные имя и фамилия или фраза : " + phrase13);
+//System.out.println(c);
+//System.out.println(k);
+//System.out.println(c2);
+//System.out.println(k2);
+//System.out.println(c3);
+//System.out.println(k3);
+//
+//	}
+}
